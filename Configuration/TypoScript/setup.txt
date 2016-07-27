@@ -11,17 +11,27 @@ tmp.ampHeaderData{
 	)
 }
 
-page.headerData.1 < tmp.ampHeaderData
 
-page.meta{
-	viewport = width=device-width,minimum-scale=1
+page{
+	headerData.1 < tmp.ampHeaderData
+
+	meta{
+		viewport = width=device-width,minimum-scale=1
+	}
+
+	includeCSS >
+
+
+	includeJS >
+	includeJS{
+		amp = https://cdn.ampproject.org/v0.js
+		amp.async = 1
+		amp.external = 1
+	}
+
+	jsFooterInline >
 }
 
-page.includeJS{
-	amp = https://cdn.ampproject.org/v0.js
-	amp.async = 1
-	amp.external = 1
-}
 
 lib.fluidContent {
    templateRootPaths {
@@ -33,4 +43,12 @@ lib.fluidContent {
    layoutRootPaths {
       200 = EXT:accelerated_mobile_pages/Resources/Private/Layouts/Content/
    }
+}
+
+config{
+	compressCss = 0
+	compressJs = 0
+	concatenateCss = 0
+	concatenateJs = 0
+	removeDefaultJS = 1
 }
