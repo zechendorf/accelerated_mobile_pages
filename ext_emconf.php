@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => '⚡ AMP - Accellerated Mobile Pages ',
+	'title' => 'AMP - Accellerated Mobile Pages (⚡)',
 	'description' => 'AMP - Accellerated Mobile Pages for TYPO3 ',
 	'category' => 'plugin',
 	'author' => 'Christopher Zechendorf',
