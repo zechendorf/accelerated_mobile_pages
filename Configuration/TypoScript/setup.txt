@@ -1,9 +1,22 @@
+page.headerData.999 = COA
+page.headerData.999{
+	10 = TEXT
+	10.data = TSFE:baseUrl
+	20 = TEXT
+	20.typolink.parameter.data = page:uid
+	20.typolink.additionalParams = &tx_accelerated_mobile_pages[amp]=1
+	20.typolink.returnLast = url
+	wrap = <link rel="amphtml" href="|" />
+}
+
+[globalVar = GP:tx_accelerated_mobile_pages|amp > 0]
 config.htmlTag_setParams = ⚡
 
 tmp.ampHeaderData = COA
 tmp.ampHeaderData{
 	10 = TEXT
-	10.data = getIndpEnv:TYPO3_REQUEST_URL
+	10.typolink.parameter.data = page:uid
+	10.typolink.returnLast = url
 	10.wrap = <link rel="canonical" href="|" />
 	20 = TEXT
 	20.value (
@@ -13,7 +26,10 @@ tmp.ampHeaderData{
 
 
 page{
-	headerData.1 < tmp.ampHeaderData
+	config.baseURL = 
+
+	headerData.999 >
+	headerData.999 < tmp.ampHeaderData
 
 	meta{
 		viewport = width=device-width,minimum-scale=1
@@ -52,3 +68,4 @@ config{
 	concatenateJs = 0
 	removeDefaultJS = 1
 }
+[global]

@@ -94,7 +94,7 @@
 	/>
 </f:section>
 <f:section name="image">
-	<amp-img src="{f:uri.image(src:column.media.originalFile.uid,width:column.dimensions.width,height:column.dimensions.height)}" alt="{column.media.alternative}" title="{column.media.title}" width="{column.dimensions.width}" height="{column.dimensions.height}" layout="responsive" />
+	<amp-img src="{f:uri.image(src:column.media.originalFile.uid,width:column.dimensions.width,height:column.dimensions.height)}" alt="{column.media.alternative}" title="{column.media.title}" width="{column.dimensions.width}" height="{column.dimensions.height}" layout="responsive" media="(max-width: {column.dimensions.width}px)" />
 	<noscript>
 	<f:media
 		file="{column.media}"
