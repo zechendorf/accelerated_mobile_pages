@@ -1,0 +1,58 @@
+<T3DataStructure> 
+	<sheets> 
+		<sDEF> 
+			<ROOT> 
+				<TCEforms> 
+					<sheetTitle>AMP Ad</sheetTitle> 
+				</TCEforms> 
+				<type>array</type> 
+				<el>
+					<settings.ad_client>
+						<TCEforms>
+							<label>Ad Client</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+								<max>30</max>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.ad_client>
+					<settings.ad_slot>
+						<TCEforms>
+							<label>Ad Slot</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+								<max>30</max>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.ad_slot>
+					<settings.width>
+						<TCEforms>
+							<label>Width</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+								<max>30</max>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.width>
+					<settings.height>
+						<TCEforms>
+							<label>Height</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+								<max>30</max>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.height>
+				</el> 
+			</ROOT> 
+		</sDEF> 
+	</sheets> 
+</T3DataStructure>
