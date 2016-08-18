@@ -16,9 +16,10 @@ tmp.ampHeaderData = COA
 tmp.ampHeaderData{
 	10 = FLUIDTEMPLATE
 	10{
+		file = EXT:accelerated_mobile_pages/Resources/Private/Templates/Header.html
 		templateName = Header	
-		layoutRootPaths.10 = EXT:accelerated_mobile_pages/Resources/Private/Layouts
-		partialRootPaths.10 = EXT:accelerated_mobile_pages/Resources/Private/Partials
+		layoutRootPaths.10 = typo3conf/ext/accelerated_mobile_pages/Resources/Private/Layouts
+		partialRootPaths.10 = typo3conf/ext/accelerated_mobile_pages/Resources/Private/Partials
 		templateRootPaths.10 = EXT:accelerated_mobile_pages/Resources/Private/Templates
 		variables{
 			mainEntityOfPage = TEXT
@@ -32,7 +33,7 @@ tmp.ampHeaderData{
 			description = TEXT
 			description.data = page:description
 			datePublished = TEXT
-			datePublished.data = page:starttime
+			datePublished.data = page:starttime//page:crdate
 			dateModified = TEXT
 			dateModified.data = page:lastUpdated
 			author = TEXT
