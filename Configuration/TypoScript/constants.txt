@@ -6,3 +6,5 @@ plugin.accelerated_mobile_pages.organization.logo.url =
 plugin.accelerated_mobile_pages.organization.logo.width = 
 # cat=accelerated_mobile_pages/140/organization.logo.height; type=string; label=Organization Logo Height
 plugin.accelerated_mobile_pages.organization.logo.height = 
+# cat=accelerated_mobile_pages/140/baseUrl; type=string; label=BaseUrl
+plugin.accelerated_mobile_pages.baseUrl = 

@@ -55,9 +55,14 @@ tmp.ampHeaderData{
 				}
 				renderObj = COA
 				renderObj{
-					10 = TEXT
-					10.stdWrap.data = file:current:publicUrl
-					10.wrap = "url":"|",
+					10 = COA
+					10{
+						10 = TEXT
+						10.value = {$plugin.accelerated_mobile_pages.baseUrl}
+						20 = TEXT
+						20.stdWrap.data = file:current:publicUrl
+						wrap = "url":"|",
+					}
 					20 = TEXT
 					20.stdWrap.data = file:current:width
 					20.wrap = "width":|,
