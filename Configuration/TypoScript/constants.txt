@@ -1,0 +1,8 @@
+# cat=accelerated_mobile_pages/140/organization.name; type=string; label=Organization Name
+plugin.accelerated_mobile_pages.organization.name = 
+# cat=accelerated_mobile_pages/140/organization.logo.url; type=string; label=Organization Logo URL
+plugin.accelerated_mobile_pages.organization.logo.url = 
+# cat=accelerated_mobile_pages/140/organization.logo.width; type=string; label=Organization Logo Width
+plugin.accelerated_mobile_pages.organization.logo.width = 
+# cat=accelerated_mobile_pages/140/organization.logo.height; type=string; label=Organization Logo Height
+plugin.accelerated_mobile_pages.organization.logo.height = 
