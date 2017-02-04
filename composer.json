@@ -1,0 +1,24 @@
+{
+  "name": "zechendorf/accelerated_mobile_pages",
+  "type": "typo3-cms-extension",
+  "description": "Template extension for AMP pages with TYPO3",
+  "homepage": "https://github.com/zechendorf/accelerated_mobile_pages",
+  "authors": [
+    {
+      "name": "Christopher Zechendorf",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^6.2 || ^7.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "ZECHENDORF\\AcceleratedMobilePages\\": "Classes"
+    }
+  },
+  "replace": {
+    "accelerated_mobile_pages": "self.version",
+    "typo3-ter/accelerated_mobile_pages": "self.version"
+  }
+}
