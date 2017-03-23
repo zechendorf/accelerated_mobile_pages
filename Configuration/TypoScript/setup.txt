@@ -96,6 +96,8 @@ page{
 	}
 
 	jsFooterInline >
+	includeJSFooterlibs >
+  includeJSFooter >
 }
 
 
