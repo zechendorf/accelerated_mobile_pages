@@ -31,14 +31,13 @@ namespace ZECHENDORF\AcceleratedMobilePages\Controller;
  */
 class AdController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-	/**
-	 * action show
-	 *
-	 * @return void
-	 */
-	public function showAction()
-	{
-		//var_dump($this->settings);die;
-		$this->view->assign('settings', $this->settings);
-	}
+    /**
+     * action show
+     *
+     * @return void
+     */
+    public function showAction()
+    {
+        $this->view->assign('settings', $this->settings);
+    }
 }

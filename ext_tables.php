@@ -1,13 +1,13 @@
 <?php
 if (!defined('TYPO3_MODE')) {
-	die('Access denied.');
+    die('Access denied.');
 }
 
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'ZECHENDORF.' . $_EXTKEY,
-	'Ad',
-	'Ad'
+    'ZECHENDORF.' . $_EXTKEY,
+    'Ad',
+    'Ad'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', '⚡ AMP');
