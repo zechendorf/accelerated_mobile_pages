@@ -1,12 +1,12 @@
 page.headerData.999 = COA
 page.headerData.999{
-	10 = TEXT
-	10.data = TSFE:baseUrl
-	20 = TEXT
-	20.typolink.parameter.data = page:uid
-	20.typolink.additionalParams = &tx_accelerated_mobile_pages[amp]=1
-	20.typolink.returnLast = url
-	wrap = <link rel="amphtml" href="|" />
+    10 = TEXT
+    10.data = TSFE:baseUrl
+    20 = TEXT
+    20.typolink.parameter.data = page:uid
+    20.typolink.additionalParams = &tx_accelerated_mobile_pages[amp]=1
+    20.typolink.returnLast = url
+    wrap = <link rel="amphtml" href="|" />
 }
 
 [globalVar = GP:tx_accelerated_mobile_pages|amp > 0]
@@ -14,89 +14,89 @@ config.htmlTag_setParams = ⚡
 
 tmp.ampHeaderData = COA
 tmp.ampHeaderData{
-	10 = FLUIDTEMPLATE
-	10{
-		file = EXT:accelerated_mobile_pages/Resources/Private/Templates/Header.html
-		templateName = Header	
-		layoutRootPaths.10 = typo3conf/ext/accelerated_mobile_pages/Resources/Private/Layouts
-		partialRootPaths.10 = typo3conf/ext/accelerated_mobile_pages/Resources/Private/Partials
-		templateRootPaths.10 = EXT:accelerated_mobile_pages/Resources/Private/Templates
-		variables{
-			mainEntityOfPage = TEXT
-			mainEntityOfPage{
-				typolink.parameter.data = page:uid
-				typolink.returnLast = url
-				typolink.forceAbsoluteUrl = 1
-			}
-			headline = TEXT
-			headline.data = page:title
-			description = TEXT
-			description.data = page:description
-			datePublished = TEXT
-			datePublished.data = page:starttime//page:crdate
-			dateModified = TEXT
-			dateModified.data = page:lastUpdated
-			author = TEXT
-			author.data = page:author
-			organizationName = TEXT
-			organizationName.value = {$plugin.accelerated_mobile_pages.organization.name}
-			organizationLogoUrl = TEXT
-			organizationLogoUrl.value = {$plugin.accelerated_mobile_pages.organization.logo.url}
-			organizationLogoWidth = TEXT
-			organizationLogoWidth.value = {$plugin.accelerated_mobile_pages.organization.logo.width}
-			organizationLogoHeight = TEXT
-			organizationLogoHeight.value = {$plugin.accelerated_mobile_pages.organization.logo.height}
-			image = FILES
-			image{
-				references {
-					table = pages
-					uid.data = page:uid
-					fieldName = media
-				}
-				renderObj = COA
-				renderObj{
-					10 = COA
-					10{
-						10 = TEXT
-						10.value = {$plugin.accelerated_mobile_pages.baseUrl}
-						20 = TEXT
-						20.stdWrap.data = file:current:publicUrl
-						wrap = "url":"|",
-					}
-					20 = TEXT
-					20.stdWrap.data = file:current:width
-					20.wrap = "width":|,
-					30 = TEXT
-					30.stdWrap.data = file:current:height
-					30.wrap = "height":|
-				}
-			}
-		}
-	}	
+    10 = FLUIDTEMPLATE
+    10{
+        file = EXT:accelerated_mobile_pages/Resources/Private/Templates/Header.html
+        templateName = Header
+        layoutRootPaths.10 = typo3conf/ext/accelerated_mobile_pages/Resources/Private/Layouts
+        partialRootPaths.10 = typo3conf/ext/accelerated_mobile_pages/Resources/Private/Partials
+        templateRootPaths.10 = EXT:accelerated_mobile_pages/Resources/Private/Templates
+        variables{
+            mainEntityOfPage = TEXT
+            mainEntityOfPage{
+                typolink.parameter.data = page:uid
+                typolink.returnLast = url
+                typolink.forceAbsoluteUrl = 1
+            }
+            headline = TEXT
+            headline.data = page:title
+            description = TEXT
+            description.data = page:description
+            datePublished = TEXT
+            datePublished.data = page:starttime//page:crdate
+            dateModified = TEXT
+            dateModified.data = page:lastUpdated
+            author = TEXT
+            author.data = page:author
+            organizationName = TEXT
+            organizationName.value = {$plugin.accelerated_mobile_pages.organization.name}
+            organizationLogoUrl = TEXT
+            organizationLogoUrl.value = {$plugin.accelerated_mobile_pages.organization.logo.url}
+            organizationLogoWidth = TEXT
+            organizationLogoWidth.value = {$plugin.accelerated_mobile_pages.organization.logo.width}
+            organizationLogoHeight = TEXT
+            organizationLogoHeight.value = {$plugin.accelerated_mobile_pages.organization.logo.height}
+            image = FILES
+            image{
+                references {
+                    table = pages
+                    uid.data = page:uid
+                    fieldName = media
+                }
+                renderObj = COA
+                renderObj{
+                    10 = COA
+                    10{
+                        10 = TEXT
+                        10.value = {$plugin.accelerated_mobile_pages.baseUrl}
+                        20 = TEXT
+                        20.stdWrap.data = file:current:publicUrl
+                        wrap = "url":"|",
+                    }
+                    20 = TEXT
+                    20.stdWrap.data = file:current:width
+                    20.wrap = "width":|,
+                    30 = TEXT
+                    30.stdWrap.data = file:current:height
+                    30.wrap = "height":|
+                }
+            }
+        }
+    }
 }
 
 page{
-	config.baseURL = 
+    config.baseURL =
 
-	headerData.999 >
-	headerData.999 < tmp.ampHeaderData
+    headerData.999 >
+    headerData.999 < tmp.ampHeaderData
 
-	meta{
-		viewport = width=device-width,minimum-scale=1
-	}
+    meta{
+        viewport = width=device-width,minimum-scale=1
+    }
 
-	includeCSS >
+    includeCSS >
 
 
-	includeJS >
-	includeJS{
-		amp = https://cdn.ampproject.org/v0.js
-		amp.async = 1
-		amp.external = 1
-	}
+    includeJS >
+    includeJS{
+        amp = https://cdn.ampproject.org/v0.js
+        amp.async = 1
+        amp.external = 1
+    }
 
-	jsFooterInline >
-	includeJSFooterlibs >
+    jsFooterInline >
+    includeJSFooterlibs >
   includeJSFooter >
 }
 
@@ -114,10 +114,10 @@ lib.fluidContent {
 }
 
 config{
-	compressCss = 0
-	compressJs = 0
-	concatenateCss = 0
-	concatenateJs = 0
-	removeDefaultJS = 1
+    compressCss = 0
+    compressJs = 0
+    concatenateCss = 0
+    concatenateJs = 0
+    removeDefaultJS = 1
 }
 [global]
